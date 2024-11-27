@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #ffcc00, #ff6699);
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto; /* Ubah dari 'hidden' agar halaman bisa di-scroll */
+}
+
+.page {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+button {
+    padding: 12px 24px; /* Atur padding agar tombol lebih proporsional */
+    border-radius: 8px; /* Tambahkan sudut lebih lembut */
+    border: none;
+    background: #ff0066;
+    color: white;
+    cursor: pointer;
+    margin: 10px auto; /* Pastikan tombol berada di tengah */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block; /* Pastikan tombol mengikuti tata letak fleksibel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #ff0077;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Tambahkan efek bercahaya */
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Pastikan canvas berada di belakang konten lainnya */
+}
+
+.animated {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .page {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px; /* Kurangi ukuran font untuk tombol di layar kecil */
+    }
+}

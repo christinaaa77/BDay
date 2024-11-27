@@ -1,0 +1,133 @@
+/* General Styling for Page */
+.memories-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffd1dc, #fff9c4); /* Soft pink to yellow gradient */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+}
+
+/* Title Styling */
+.memories-title {
+    font-size: 2rem;
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+.memories-description {
+    font-size: 1.6rem;
+    color: #b76500;
+    font-weight: bold;
+    margin-bottom: 40px;
+    max-width: 700px;
+    line-height: 1.8;
+    padding: 0 20px;
+    display: inline-block;
+    white-space: normal; /* Allow text to wrap to the next line */
+    opacity: 0; /* Start with the text invisible */
+    filter: blur(5px); /* Apply initial blur */
+    animation: fadeInBlur 6s ease-out forwards; /* Apply custom animation */
+}
+
+/* Keyframe for blur to focus animation */
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0; /* Text is invisible */
+        filter: blur(5px); /* Start with blur */
+    }
+    100% {
+        opacity: 1; /* Text becomes fully visible */
+        filter: blur(0); /* Remove the blur */
+    }
+}
+
+
+
+/* Video Container Styling */
+.memories-video-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    border: 3px solid #ff4081;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Video Styling */
+.memories-video {
+    width: 100%;
+    height: auto;
+}
+
+/* Button Styling */
+.memories-button {
+    background-color: #ff4081;
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+/* Button Hover Effect */
+.memories-button:hover {
+    background-color: #f50057;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .memories-title {
+        font-size: 1.8rem; /* Slightly smaller title */
+    }
+
+    .memories-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .memories-video-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .memories-button {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Mobile and very small screens */
+@media (max-width: 480px) {
+    .memories-title {
+        font-size: 1.6rem;
+    }
+
+    .memories-description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .memories-video-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .memories-button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+}
